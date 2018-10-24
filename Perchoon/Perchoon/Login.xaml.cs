@@ -21,8 +21,16 @@ namespace Perchoon
         {
             //DisplayAlert("Login", "Login Sucessfull", "Ok");
 
-            await Navigation.PushAsync(new MainPage());
+            //Navigation.PushAsync(new MainPage());
+
+            Navigation.PushModalAsync(new MainPage());
         }
 
+
+        //Preventing Hardware Button From Going Back
+        protected override bool OnBackButtonPressed()
+        {
+            return true;
+        }
     }
 }

@@ -13,5 +13,11 @@ namespace Perchoon
         {
             InitializeComponent();
         }
+
+        protected override bool OnBackButtonPressed()
+        {
+            return false;
+        }
+
     }
 }
