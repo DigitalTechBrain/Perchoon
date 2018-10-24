@@ -9,9 +9,11 @@ namespace Perchoon
 {
     public partial class MainPage : ContentPage
     {
-        public MainPage()
+        public MainPage( string username )
         {
             InitializeComponent();
+
+            DispUserName.Text = "Hello  " + username;
         }
 
         protected override bool OnBackButtonPressed()

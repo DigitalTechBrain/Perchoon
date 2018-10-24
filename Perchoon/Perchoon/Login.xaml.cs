@@ -19,11 +19,11 @@ namespace Perchoon
 
         private void Login_Button(object sender,EventArgs e)
         {
-            //DisplayAlert("Login", "Login Sucessfull", "Ok");
+            DisplayAlert("Login", "Login Sucessfull", "Ok");
 
             //Navigation.PushAsync(new MainPage());
 
-            Navigation.PushModalAsync(new MainPage());
+            Navigation.PushModalAsync(new MainPage(UserName.Text));
         }
 
 
