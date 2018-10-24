@@ -11,7 +11,7 @@ namespace Perchoon
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new Perchoon.Login();
         }
 
         protected override void OnStart()

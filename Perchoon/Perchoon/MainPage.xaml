@@ -2,13 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Perchoon"
-             x:Class="Perchoon.MainPage">
+             x:Class="Perchoon.MainPage" BackgroundColor="#D9E8EC">
 
     <StackLayout>
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!...Jack" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <Label Text="Welcome to Xamarin.Forms!...Jack.hello" />
+          
+            
     </StackLayout>
 
 </ContentPage>
