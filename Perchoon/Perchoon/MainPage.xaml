@@ -7,8 +7,20 @@
     <StackLayout>
         <!-- Place new controls here -->
         <Label x:Name="DispUserName" />
-          
-            
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="200" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+        </Grid>
+        
+        <Label x:Name="CompanyUrl" Text="Powered By Future Finger Technologies" TextColor="Green" HorizontalTextAlignment="Center" Margin="0,550,0,0"></Label>
     </StackLayout>
 
 </ContentPage>

@@ -14,11 +14,26 @@ namespace Perchoon
             InitializeComponent();
 
             DispUserName.Text = "Hello  " + username;
+
+            NavigateToUrl();
         }
 
         protected override bool OnBackButtonPressed()
         {
             return false;
+        }
+
+        void NavigateToUrl()
+        {
+            CompanyUrl.GestureRecognizers.Add(new TapGestureRecognizer()
+            {
+                Command = new Command(() =>
+                {
+                    Navigation.PushModalAsync(new WebViewDevelop());
+
+                })
+
+            });
         }
 
     }

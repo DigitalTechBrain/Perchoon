@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Perchoon.Registration" BackgroundColor="BlueViolet">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout x:Name="RegistrationStack" Padding="20" Margin="0,60,0,0">
+                <Label Text="Registration Form" TextColor="Black" FontSize="Large" HorizontalTextAlignment="Center"></Label>
+                <Entry x:Name="FullName" Placeholder ="Full Name" TextColor="Black"></Entry>
+                <Entry x:Name="FatherName" Placeholder="Father Name" TextColor="Black"></Entry>
+                <Entry x:Name="MailId" Placeholder="Email Address" TextColor="Black" Keyboard="Email"></Entry>
+                <DatePicker x:Name="DOB" MinimumDate="1947/08/15" MaximumDate="2018/12/25" Format="dd/mm/yyyy"></DatePicker>
+                <Entry x:Name="Phone" Placeholder="Phone Number" TextColor="Black" Keyboard="Telephone"></Entry>
+                <Picker x:Name="Location" Title="Select Location">
+                    <Picker.Items>
+                        <x:String>India</x:String>
+                        <x:String>USA</x:String>
+                        <x:String>Australia</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Label x:Name="AddressLabel" Text="Enter Full Address Below" TextColor="Black"></Label>
+                <Editor x:Name="Address" HeightRequest="100"></Editor>
+                <Button x:Name="SubmitButton" BackgroundColor="White" TextColor="Black" Text="Register" Clicked="SubmitButton_Clicked"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

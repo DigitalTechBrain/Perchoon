@@ -1,14 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Perchoon.Login" BackgroundColor="#F0B7AA">
+             x:Class="Perchoon.Login" BackgroundColor="#784B71">
     <ContentPage.Content>
         <StackLayout x:Name="MainStack">
+            
+    
             <StackLayout Padding="20" Margin="0,150,0,0">
                 <Entry Text="" Placeholder ="User Name" TextColor="Black" x:Name="UserName"></Entry>
                 <Entry Text="" Placeholder ="Password" TextColor="Black" IsPassword="True"></Entry>
                 <Button Text="Login" BackgroundColor="White" TextColor="#2ccbff" Clicked="Login_Button"></Button>
-                <Label Text="Not a member? Sign up Now" TextColor="Green" HorizontalOptions="Center"></Label>
+                <Label x:Name="Lblclick" Text="Not a member? Sign up Now" TextColor="Green" HorizontalOptions="Center"></Label>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
