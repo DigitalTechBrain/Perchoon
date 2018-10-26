@@ -2,9 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Perchoon.WebViewDevelop">
-    <ContentPage.Content>
-        <StackLayout>
-           
-        </StackLayout>
-    </ContentPage.Content>
+
+    <StackLayout>
+        <ProgressBar Progress="0.5" ProgressColor="Green" BackgroundColor="DarkOrange" HorizontalOptions="FillAndExpand" x:Name="progress"/>
+        <WebView x:Name="browser"
+                 VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand"
+                 Navigating="browser_Navigating"
+                 Navigated="browser_Navigated">
+            
+        </WebView>
+    </StackLayout>
+  
 </ContentPage>

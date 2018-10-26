@@ -30,14 +30,14 @@
                     <ColumnDefinition Width="100*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.Row="0" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                <Button Grid.Row="0" Grid.Column="0" Image="@drawable/Button1.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
                 <Button Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
                 <Button Grid.Row="1" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
                 <Button Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
                 <Button Grid.Row="2" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
                 <Button Grid.Row="2" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
                 <Button Grid.Row="3" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
-                <Button Grid.Row="3" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                <Button Grid.Row="3" Grid.Column="1" Image="@drawable/Button8.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
             </Grid>
         </StackLayout>
 

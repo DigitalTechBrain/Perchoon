@@ -17,6 +17,12 @@ namespace Perchoon
 		public Login ()
 		{
 			InitializeComponent ();
+
+            // Activity Indicator means Loading...
+            this.InitializeComponent();
+            this.BindingContext = this;
+            this.IsBusy = true;
+
             NavigateToRegistration();
         }
 
@@ -48,6 +54,8 @@ namespace Perchoon
                })
                
             });
+          
+            this.IsBusy = false;
         }
 
 
