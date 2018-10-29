@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Perchoon.HomeItems" BackgroundColor="#DBDB29">
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar  Placeholder="Search " 
+                                            PlaceholderColor="Gray" 
+                                            TextColor="Black"
+                                            x:Name="srbSearchPeople"
+                                            BackgroundColor="#FC7102"
+                                            HeightRequest="40"/>
+            <Label TextColor="Green" Text="**If you are unable to find Items Just write down items on Paper and take a picture and Upload it"/>
+            <StackLayout>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" ></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Button  x:Name="ItemPhoto" Text="Take Picture" Grid.Row="0" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                    <Button x:Name="UploadPhoto" Text="Upload Image" TextColor="White" Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                    
+                </Grid>
+            </StackLayout>
+
+            <ListView x:Name="ItemList" ItemTapped="ItemList_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Grid BackgroundColor="Maroon" Padding="10">
+                                    <Label Text="{Binding ID}" TextColor="White"/>
+                                </Grid>
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="{Binding Name}" TextColor="Maroon"></Label>
+                                    <Label Text="{Binding Price}" TextColor="Purple"></Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </StackLayout>
+       
+     
+       
+    </ContentPage.Content>
+</ContentPage>

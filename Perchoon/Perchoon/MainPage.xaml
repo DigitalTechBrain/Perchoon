@@ -32,21 +32,21 @@
                     <ColumnDefinition Width="100*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
 
-                <Button Grid.Row="0" Grid.Column="0" Image="@drawable/Button1.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
-                <Button Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
-                <Button Grid.Row="1" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
-                <Button Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
-                <Button Grid.Row="2" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
-                <Button Grid.Row="2" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
-                <Button Grid.Row="3" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
-                <Button Grid.Row="3" Grid.Column="1" Image="@drawable/Button8.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                <Button x:Name="HomeItems" Text="General Store" Font="Bold,20" BackgroundColor="#14B344" TextColor="White"  Grid.Row="0" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="HomeItems_Clicked"/>
+                <Button x:Name="HarwareItems" Text="Hardware Shop" Font="Bold,20" BackgroundColor="#14B344"  TextColor="White"  Grid.Row="0" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="HarwareItems_Clicked"/>
+                <Button x:Name="ElectronicItems" Text="Electronic" Font="Bold,20" BackgroundColor="#14B344"  TextColor="White"  Grid.Row="1" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="ElectronicItems_Clicked"/>
+                <Button x:Name="VegetableItems" Text="Vegetables" Font="Bold,20" BackgroundColor="#14B344"  TextColor="White"  Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="VegetableItems_Clicked"/>
+                <Button x:Name="FoodItems" Text="Restaurant Foods" Font="Bold,20" BackgroundColor="#14B344" TextColor="White"  Grid.Row="2" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="FoodItems_Clicked"/>
+                <Button x:Name="DrinkItems" Text="Dairy Products" Font="Bold,20" BackgroundColor="#14B344" TextColor="White"  Grid.Row="2" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="DrinkItems_Clicked"/>
+                <Button x:Name="WorkerServices" Text="Mechanics and Workers" Font="Bold,20" BackgroundColor="#14B344" TextColor="White"  Grid.Row="3" Grid.Column="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="WorkerServices_Clicked"/>
+                <Button x:Name="HelpSupport" Text="Help Support" Font="Bold,20" BackgroundColor="#14B344"  TextColor="White"  Grid.Row="3" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Clicked="HelpSupport_Clicked"/>
             </Grid>
         </StackLayout>
 
        
         <!-- Footer -->
         
-        <Label x:Name="CompanyUrl" Text="Powered By Future Finger Technologies" TextColor="Green" HorizontalTextAlignment="Center" Margin="0,0,0,0"></Label>
+        <Label x:Name="CompanyUrl" Text="Powered By Future Finger Technologies" TextColor="Green" HorizontalTextAlignment="Center" Margin="0,10,0,0"></Label>
        
     </StackLayout>
 

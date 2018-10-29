@@ -36,5 +36,44 @@ namespace Perchoon
             });
         }
 
+        private void HomeItems_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new HomeItems());
+        }
+
+        private void HarwareItems_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ElectronicItems_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VegetableItems_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FoodItems_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DrinkItems_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void WorkerServices_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HelpSupport_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
