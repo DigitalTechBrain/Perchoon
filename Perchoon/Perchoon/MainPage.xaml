@@ -1,22 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+    
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Perchoon"
              x:Class="Perchoon.MainPage" BackgroundColor="Yellow">
 
+    
     <StackLayout>
-       
-       
+
+      
         
-        <StackLayout Margin="0,5,0,0">
+        <StackLayout Margin="0,2,0,0">
         <Image x:Name="StoreImage" Source="@drawable/Banner.png" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Image>
         </StackLayout>
 
         <!-- User Name -->
 
-        <Label x:Name="DispUserName" Margin="0,5,0,0" />
+        <Label x:Name="DispUserName" Margin="0,2,0,0" />
 
-        <StackLayout Margin="0,5,0,0">
+        <StackLayout Margin="0,2,0,0">
             <Grid>
                 <Grid.RowDefinitions >
                     <RowDefinition Height="100*" ></RowDefinition>
@@ -44,7 +46,7 @@
        
         <!-- Footer -->
         
-        <Label x:Name="CompanyUrl" Text="Powered By Future Finger Technologies" TextColor="Green" HorizontalTextAlignment="Center" Margin="0,5,0,0"></Label>
+        <Label x:Name="CompanyUrl" Text="Powered By Future Finger Technologies" TextColor="Green" HorizontalTextAlignment="Center" Margin="0,0,0,0"></Label>
        
     </StackLayout>
 
