@@ -43,37 +43,37 @@ namespace Perchoon
 
         private void HarwareItems_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushModalAsync(new HardwareItems());
         }
 
         private void ElectronicItems_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushModalAsync(new Electronics());
         }
 
         private void VegetableItems_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushModalAsync(new Vegetables());
         }
 
         private void FoodItems_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushModalAsync(new JunkFoods());
         }
 
         private void DrinkItems_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushModalAsync(new DairyProducts());
         }
 
         private void WorkerServices_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushModalAsync(new WorkerServices());
         }
 
         private void HelpSupport_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushModalAsync(new Support());
         }
     }
 }
