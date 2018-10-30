@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
+using System.Web.Services.Protocols;
 
 namespace PerchoonWebService
 {
@@ -30,9 +32,9 @@ namespace PerchoonWebService
         {
 
 
-            using (SqlConnection con = new SqlConnection("server=JACK-PC;UID=sa;Password=1234;Database=Testing"))
+            using (SqlConnection con = new SqlConnection(@"server=USER-PC\SQLEXPRESS;UID=sa;Password=1234;Database=GeneralStore"))
             {
-                using (SqlCommand cmd = new SqlCommand("SELECT * FROM tbl"))
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM UserRegistration"))
                 {
                     using (SqlDataAdapter sda = new SqlDataAdapter())
                     {
@@ -46,6 +48,54 @@ namespace PerchoonWebService
                         }
                     }
                 }
+            }
+        }
+
+        // User Authentication
+
+        public AuthUser User;
+
+        [WebMethod]
+        [SoapHeader("User", Required = true)]
+        public string UserAuthentication()
+        {
+            if (User != null)
+            {
+                if (User.IsValid())
+                    return "Hello " + User.UserName;
+                else
+                    return "Invalid User details!";
+            }
+            else
+                return "Please provide User details!";
+        }
+    }
+
+    public class AuthUser : System.Web.Services.Protocols.SoapHeader
+    {
+        public string UserName { get; set; }
+        public string Password { get; set; }
+
+        public bool IsValid()
+        {
+            int count = 0;
+
+            //You can use database connection to check the userdetails valid or not
+            //If user details found return true or else return false
+
+            string config = ConfigurationManager.ConnectionStrings["mycon"].ConnectionString;
+
+            using (SqlConnection sqlcon = new SqlConnection(config))
+            {
+                SqlCommand sqlcmd = new SqlCommand("Select * from UserRegistration where Cphone ='" + UserName + "' and Cpwd ='" + Password + "'", sqlcon);
+                sqlcmd.Connection.Open();
+                count = Convert.ToInt32(sqlcmd.ExecuteScalar());
+                sqlcmd.Connection.Close();
+
+                if (count > 0)
+                    return true;
+                else
+                    return false;
             }
         }
     }

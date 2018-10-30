@@ -34,6 +34,8 @@ namespace Perchoon
 
             //Navigation.PushAsync(new MainPage());
 
+            
+
             Navigation.PushModalAsync(new MainPage(UserName.Text));
         }
 

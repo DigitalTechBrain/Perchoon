@@ -8,7 +8,7 @@
     
             <StackLayout Padding="20" Margin="0,150,0,0">
                 <Entry Text="" Placeholder ="User Name" TextColor="Black" x:Name="UserName"></Entry>
-                <Entry Text="" Placeholder ="Password" TextColor="Black" IsPassword="True"></Entry>
+                <Entry Text="" Placeholder ="Password" TextColor="Black" IsPassword="True" x:Name="UserPassword" ></Entry>
                 <Button Text="Login" BackgroundColor="White" TextColor="#2ccbff" Clicked="Login_Button"></Button>
                 <Label x:Name="Lblclick" Text="Not a member? Sign up Now" TextColor="Green" HorizontalOptions="Center"></Label>
                 <ActivityIndicator x:Name="ActivityIndicator" IsRunning="{Binding IsBusy}" VerticalOptions="Center" HorizontalOptions="Center" Color="Blue"></ActivityIndicator>
