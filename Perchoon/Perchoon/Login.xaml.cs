@@ -30,11 +30,13 @@ namespace Perchoon
 
         private void Login_Button(object sender,EventArgs e)
         {
-           // DisplayAlert("Login", "Login Sucessfull", "Ok");
+            // DisplayAlert("Login", "Login Sucessfull", "Ok");
 
             //Navigation.PushAsync(new MainPage());
 
-            
+            // Consuming Web Service
+           // LoginAuthentication.Connect_WS connect = new LoginAuthentication.Connect_WS();
+           
 
             Navigation.PushModalAsync(new MainPage(UserName.Text));
         }
